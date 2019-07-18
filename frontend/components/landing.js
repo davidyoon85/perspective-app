@@ -29,8 +29,6 @@ class Landing extends Component {
         const email = this.state.email;
         const payload = Object.assign({}, {email});
 
-        // fetch('perspective-shift.herokuapp.com/api/v1/users', {
-            debugger
         fetch('/api/users', {
             method: 'POST',
             headers: {
@@ -39,11 +37,9 @@ class Landing extends Component {
             },
             body: JSON.stringify(payload)
             }).then(response => {
-                debugger
                 return response.json()
                 })
             .then(json => {
-                debugger
                 const user_id = json.id;
                 const stateData = Object.assign({}, this.state);
                 const submission = {...stateData, ...{user_id}};
@@ -53,8 +49,6 @@ class Landing extends Component {
     }
 
     createSubmission = (submission) => {
-        // fetch('perspective-shift.herokuapp.com/api/v1/submissions', {
-            debugger
         fetch('/api/submissions', {
             method: 'POST',
             headers: {
