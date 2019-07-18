@@ -1,0 +1,241 @@
+html, body, section, article, h1, h2, h3, h4, h5, p {
+
+  margin: 0;
+  border: 0;
+  padding: 0;
+
+  font: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  color: inherit;
+
+  background: transparent;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: black;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#root {
+  min-width: 650px
+}
+
+input[type=radio] {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 15px;
+  background-clip: content-box;
+  border: 2px solid #bbbbbb;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.test {
+  background-color: #fff;
+}
+
+input[type="email"] {
+  display: inline-block;
+  width: 75%;
+  height: 20px;
+  padding: 10px 15px;
+  font-size: .9rem;
+  background-clip: content-box;
+  border: 2px solid #bbbbbb;
+  margin-bottom: 3%;
+  border-radius: 4px;
+}
+
+input[type="email"]::placeholder {
+  color: lightgray;
+}
+
+input[type="email"]:focus {
+  background-color: #fff;
+  outline: none;
+}
+
+.form-header {
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 0px 30px 50px;
+  width: 80%;
+  margin: auto;
+}
+
+.header-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1B3865;
+  padding: 10px 0px;
+}
+
+.header-body {
+  font-size: .9rem;
+  color: #58595D;
+  font-weight: 500;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: .9rem;
+  font-weight: 400;
+  border: 1px solid lightgray;
+  width: 40%;
+  min-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.question h5 {
+  width: 70%;
+  font-weight: 600;
+  padding: 25px;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 25px;
+  width: 65%;
+}
+
+.disagree {
+  color: #F14648;
+  font-size: .7rem;
+  font-weight: 600;
+}
+
+.agree {
+  color:#229A77;
+  font-size: .7rem;
+  font-weight: 600;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3% 0 10% 0;
+}
+
+button[type="submit"] {
+  font-weight: 600;
+  color: #fff;
+  background-color: #435DF8;
+  padding: 7px 15px;
+  border-radius: 4px;
+}
+
+.result-container {
+  width: 90%;
+  min-width: 885px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+  margin-top: 5%;
+  padding: 3%;
+}
+
+.result-header {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1B3865;
+  padding-bottom: 7%;
+}
+
+.result-subheader {
+  font-size: .9rem;
+  font-weight: 600;
+  padding-bottom: 7%;
+}
+
+#spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+}
+
+.sk-three-bounce > div {
+  height: 36px !important;
+  width: 36px !important;
+}
+
+.result-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.result-chart {
+  width: 50%;
+  min-width: 540px;
+  color: #8C8C8C;
+  font-weight: 700;
+}
+
+.chart-type {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-subtype {
+  display: flex;
+  padding: 10px;
+}
+
+.type-a {
+  font-size: .8rem;
+  width: 25%;
+}
+
+.chart-bar {
+  display: flex;
+  /* justify-content: center; */
+  width: 50%;
+}
+
+.inactive-bar {
+  background-color: #E5EAEE;
+  width: 40%;
+  height: .9rem;
+  border-radius: 3px;
+}
+
+.active-bar {
+  background-color: #AC2BD0;
+  width: 40%;
+  height: .9rem;
+  border-radius: 3px;
+}
+
+.type-b {
+  font-size: .8rem;
+  width: 25%;
+}

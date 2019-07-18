@@ -1,12 +1,18 @@
 import React from 'react';
-//insret router here
+import { Route, Switch } from 'react-router-dom';
 
-const App = () => {
-    return (
-        <div>
-            <h1>Bench BnBqwdqwdw</h1>
-        </div>
-    )
-};
+import Landing from './landing';
+import Result from './result';
+
+function App() {
+  return (
+      <React.Fragment>
+        <Switch>
+          <Route path='/Result' component={Result} />
+          <Route exact path='/' component={Landing} />
+        </Switch>
+      </React.Fragment>
+  );
+}
 
 export default App;
