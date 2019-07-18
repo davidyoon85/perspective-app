@@ -16,6 +16,10 @@ class Landing extends Component {
         email: ''
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
     handleChange = (e) => {
         this.setState({ [e.target.name]: e.target.value })
     }

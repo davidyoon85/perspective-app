@@ -15,8 +15,8 @@ class Result extends Component {
     }
 
     componentDidMount() {
+        window.scrollTo(0, 0)
         let data = this.props.location.state.data;
-
         this.setState(
             { data }, 
             () => this.checkScore()
@@ -33,16 +33,16 @@ class Result extends Component {
             j: 0 
         }
 
-        ans1 > 4 ? score.e -= 1 : score.e += 1;
-        ans2 > 4 ? score.s += 1 : score.s -= 1;
-        ans3 > 4 ? score.t -= 1 : score.t += 1;
-        ans4 > 4 ? score.e += 1 : score.e -= 1
-        ans5 > 4 ? score.s -= 1 : score.s += 1;
-        ans6 > 4 ? score.j -= 1 : score.j += 1;
-        ans7 > 4 ? score.t += 1 : score.t -= 1;
-        ans8 > 4 ? score.j += 1 : score.j -= 1;
-        ans9 > 4 ? score.e += 1 : score.e -= 1;
-        ans10 > 4 ? score.j -= 1 : score.j += 1;
+        ans1 > 4 ? score.e += (4 - ans1) : score.e += (4 - ans1);
+        ans2 > 4 ? score.s += (ans2 - 4) : score.s += (ans2 - 4);
+        ans3 > 4 ? score.t += (4 - ans3) : score.t += (4 - ans3);
+        ans4 > 4 ? score.e += (ans4 - 4) : score.e += (ans4 - 4);
+        ans5 > 4 ? score.s += (4 - ans5) : score.s += (4 - ans5);
+        ans6 > 4 ? score.j += (4 - ans6) : score.j += (4 - ans6);
+        ans7 > 4 ? score.t += (ans7 - 4) : score.t += (ans7 - 4);
+        ans8 > 4 ? score.j += (ans8 - 4) : score.j += (ans8 - 4);
+        ans9 > 4 ? score.e += (ans9 - 4) : score.e += (ans9 - 4);
+        ans10 > 4 ? score.j += (4 - ans10) : score.j += (4 - ans10);
 
         this.checkType(score)
     }
@@ -71,7 +71,7 @@ class Result extends Component {
                 margin: 0 auto;
                 border-color: red;
             `;
-            debugger
+
             return (
                 <div className="loader-container">
                     <BeatLoader
