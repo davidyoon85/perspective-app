@@ -1,7 +1,7 @@
 # Perspective App
 Perspective App is single-page application (SPA) that generates a short 10 question Myers–Briggs Type Indicator (MBTI) quiz that will identify your personality type!
 
-The technlogies used to create Perspective include: React, PostgresSQL, Ruby on Rails, HTML5, and CSS3.
+The technlogies used to create this app include: React, PostgresSQL, Ruby on Rails, HTML5, and CSS3.
 
 <p align="center">
 <img src="./public/landing-page.png" width="900" height="300" align="middle"/>
