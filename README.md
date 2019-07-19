@@ -4,7 +4,7 @@ Perspective App is single-page application (SPA) that generates a short 10 quest
 The technlogies used to create Perspective include: React, PostgresSQL, Ruby on Rails, HTML5, and CSS3.
 
 <p align="center">
-<img src="./public/landing-page.png" width="900" height="500" align="middle"/>
+<img src="./public/landing-page.png" width="900" height="300" align="middle"/>
 </p>
 
 <p align="center">
