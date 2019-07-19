@@ -60,7 +60,6 @@ class Result extends Component {
         score.t >= 0 ? type.t = true : type.t = false
         score.j >= 0 ? type.j = true : type.j = false
 
-        this.setState({ type })
         this.setState({ type, loading: false })
     }
 
@@ -71,7 +70,6 @@ class Result extends Component {
                 margin: 0 auto;
                 border-color: red;
             `;
-
             return (
                 <div className="loader-container">
                     <BeatLoader
@@ -79,11 +77,11 @@ class Result extends Component {
                     sizeUnit={"px"}
                     size={40}
                     color={'#435DF8'}
-                    loading={this.state.loading}
                     />
                 </div>
             )
         } else {
+    
             const { e, s, t, j } = this.state.type;
             let type = '';
 
