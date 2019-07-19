@@ -1,0 +1,90 @@
+.result-container {
+    width: 90%;
+    min-width: 885px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #d3d3d3;
+    margin-top: 5%;
+    padding: 3%;
+}
+  
+.result-header {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1B3865;
+    padding-bottom: 7%;
+}
+  
+.result-subheader {
+    font-size: .9rem;
+    font-weight: 600;
+    padding-bottom: 7%;
+}
+  
+.result-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+.result-chart {
+    width: 50%;
+    min-width: 540px;
+    color: #8C8C8C;
+    font-weight: 700;
+}
+  
+.chart-type {
+    display: flex;
+    flex-direction: column;
+}
+  
+.chart-subtype {
+    display: flex;
+    padding: 10px;
+}
+  
+.type-a {
+    font-size: .8rem;
+    width: 25%;
+}
+  
+.chart-bar {
+    display: flex;
+    width: 50%;
+}
+  
+.inactive-bar {
+    background-color: #E5EAEE;
+    width: 40%;
+    height: .9rem;
+    border-radius: 3px;
+}
+  
+.active-bar {
+    background-color: #AC2BD0;
+    width: 40%;
+    height: .9rem;
+    border-radius: 3px;
+}
+  
+.type-b {
+    font-size: .8rem;
+    width: 25%;
+}
+  
+.loader-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.host_form_errors {
+    position: relative;
+    bottom: 13px;
+    font-weight: 500;
+    color: #ff0000;
+}

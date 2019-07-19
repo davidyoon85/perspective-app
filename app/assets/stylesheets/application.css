@@ -14,4 +14,5 @@
  *= require_self
  *= require './app.css'
  *= require './landing.css'
+ *= require './result.css'
  */

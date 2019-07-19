@@ -3,21 +3,16 @@ import { withRouter } from 'react-router-dom';
 
 class Landing extends Component {
     state = { 
-        ans1: '',
-        ans2: '',
-        ans3: '',
-        ans4: '',
-        ans5: '',
-        ans6: '',
-        ans7: '',
-        ans8: '',
-        ans9: '',
-        ans10: '',
-        email: ''
+        email: '',
+        errors: []
     }
 
     componentDidMount() {
         window.scrollTo(0, 0);
+    }
+
+    componentWillUnmount() {
+        this.setState({ errors: [] })
     }
 
     handleChange = (e) => {
@@ -32,6 +27,12 @@ class Landing extends Component {
     createUser = () => {
         const email = this.state.email;
         const payload = Object.assign({}, {email});
+
+        const errors = this.validate(email);
+        if (errors.length > 0) {
+            this.setState({ errors });
+            return;
+        }
 
         fetch('/api/users', {
             method: 'POST',
@@ -49,6 +50,8 @@ class Landing extends Component {
                 const submission = {...stateData, ...{user_id}};
 
                 this.createSubmission(submission)
+            }).catch(err => {
+                console.log(err)
             })
     }
 
@@ -69,10 +72,20 @@ class Landing extends Component {
                     pathname: '/Result',
                     state: { data: json }
                 })
+            }).catch(err => {
+                console.log(err)
             })
     }
 
+    validate = (email) => {
+        const errors = [];
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.push("Invalid email, please try again.")
+        return errors;
+    }
+
     render() {
+        const { errors } = this.state;
+
         return ( 
             <React.Fragment>
             <div className="form-header">
@@ -239,6 +252,11 @@ class Landing extends Component {
             </div>
 
             <div className="submit-button">
+                <div className="host_form_errors">
+                    {errors.map(error => (
+                        <p key={error}>&#10060; {error}</p>
+                    ))}
+                </div>
                 <button type="submit">Save & Continue</button>
             </div>
             </form>
