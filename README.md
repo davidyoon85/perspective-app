@@ -10,5 +10,5 @@ The technlogies used to create Perspective include: React, PostgresSQL, Ruby on 
 You can take the quiz [here](https://perspective-shift.herokuapp.com)! Or visit my portfolio site [here](http://www.davidyoon.me/#home)!
 
 <p align="center">
-<img src="./public/result-page.png" width="500" height="700" align="middle"/>
+<img src="./public/result-page.png" width="700" height="500" align="middle"/>
 </p>
