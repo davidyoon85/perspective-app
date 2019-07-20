@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 import { BeatLoader } from 'react-spinners';
 
@@ -15,12 +16,16 @@ class Result extends Component {
     }
 
     componentDidMount() {
-        window.scrollTo(0, 0)
-        let data = this.props.location.state.data;
-        this.setState(
-            { data }, 
-            () => this.checkScore()
-        );
+        if (!this.props.location.state) {
+            this.props.history.push('/');
+        } else {
+            window.scrollTo(0, 0)
+            let data = this.props.location.state.data;
+            this.setState(
+                { data }, 
+                () => this.checkScore()
+            );
+        }
     }
 
     checkScore = () => {
@@ -163,4 +168,4 @@ class Result extends Component {
     }
 }
  
-export default Result;
+export default withRouter(Result);

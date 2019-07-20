@@ -8,7 +8,7 @@ function App() {
   return (
       <React.Fragment>
         <Switch>
-          <Route path='/Result' component={Result} />
+          <Route exact path='/Result' component={Result} />
           <Route exact path='/' component={Landing} />
         </Switch>
       </React.Fragment>
