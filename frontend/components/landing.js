@@ -16,6 +16,7 @@ class Landing extends Component {
     }
 
     handleChange = (e) => {
+        let a = this.state;
         this.setState({ [e.target.name]: e.target.value })
     }
 
@@ -78,9 +79,12 @@ class Landing extends Component {
     }
 
     validate = (email) => {
-        const errors = [];
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.push("Invalid email, please try again.")
-        return errors;
+        var regex = /^\w+([\.-]?\w+)+@\w+([\.:]?\w+)+(\.[a-zA-Z0-9]{2,3})+$/;
+            if (regex.test(email)) {
+                return true;
+            } else if (email == '' || !regex.test(email)) {
+                return false;
+            }
     }
 
     render() {
@@ -264,17 +268,17 @@ class Landing extends Component {
 
                     <div className="errors-container">
                         <div className="errors-main">
-                                <h1>Choose an option for Question 1</h1>
-                                <h1>Choose an option for Question 2</h1>
-                                <h1>Choose an option for Question 3</h1>
-                                <h1>Choose an option for Question 4</h1>
-                                <h1>Choose an option for Question 5</h1>
-                                <h1>Choose an option for Question 6</h1>
-                                <h1>Choose an option for Question 7</h1>
-                                <h1>Choose an option for Question 8</h1>
-                                <h1>Choose an option for Question 9</h1>
-                                <h1>Choose an option for Question 10</h1>
-                                <h1>Valid email address must be entered</h1>
+                                <h1 className={this.state.ans1 === undefined ? 'invalid' : 'valid'}>Choose an option for Question 1</h1>
+                                <h1 className={this.state.ans2 === undefined ? 'invalid' : 'valid'}>Choose an option for Question 2</h1>
+                                <h1 className={this.state.ans3 === undefined ? 'invalid' : 'valid'}>Choose an option for Question 3</h1>
+                                <h1 className={this.state.ans4 === undefined ? 'invalid' : 'valid'}>Choose an option for Question 4</h1>
+                                <h1 className={this.state.ans5 === undefined ? 'invalid' : 'valid'}>Choose an option for Question 5</h1>
+                                <h1 className={this.state.ans6 === undefined ? 'invalid' : 'valid'}>Choose an option for Question 6</h1>
+                                <h1 className={this.state.ans7 === undefined ? 'invalid' : 'valid'}>Choose an option for Question 7</h1>
+                                <h1 className={this.state.ans8 === undefined ? 'invalid' : 'valid'}>Choose an option for Question 8</h1>
+                                <h1 className={this.state.ans9 === undefined ? 'invalid' : 'valid'}>Choose an option for Question 9</h1>
+                                <h1 className={this.state.ans10 === undefined ? 'invalid' : 'valid'}>Choose an option for Question 10</h1>
+                                <h1 className={this.validate(this.state.email) ? 'valid' : 'invalid'}>Valid email address must be entered</h1>
                         </div>
                     </div>
                 </div>

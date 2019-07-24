@@ -164,16 +164,29 @@ button[type="submit"] {
 }
 
 .errors-container {
-  width: 30%;
+  width: 40%;
   position: fixed;
   right: 0;
   min-width: 400px;
-  border: 1px solid #bbbbbb;
 }
 .errors-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  width: 60%;
+  margin: auto;
   padding: 20px;
 }
 
 .errors-main > h1 {
   padding: 10px 0;
+}
+
+.invalid {
+  color: red;
+}
+
+.valid { 
+  color: green;
 }
