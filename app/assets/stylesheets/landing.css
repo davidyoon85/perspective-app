@@ -71,13 +71,21 @@ input[type="email"]:focus {
   outline: none;
 }
 
+.landing-container {
+  margin: auto;
+  width: 80%;
+}
+
+.main-form {
+  width: 40%;
+}
+
 .form-header {
   height: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 40px 0px 30px 50px;
-  width: 80%;
   margin: auto;
 }
 
@@ -94,6 +102,11 @@ input[type="email"]:focus {
   font-weight: 500;
 }
 
+.form-section {
+  display: flex;
+  min-width: 1200px;
+}
+
 .question {
   display: flex;
   flex-direction: column;
@@ -102,7 +115,7 @@ input[type="email"]:focus {
   font-size: .9rem;
   font-weight: 400;
   border: 1px solid #d3d3d3;
-  width: 40%;
+  width: 100%;
   min-width: 600px;
   margin: auto;
   text-align: center;
@@ -148,4 +161,19 @@ button[type="submit"] {
   background-color: #435DF8;
   padding: 7px 15px;
   border-radius: 4px;
+}
+
+.errors-container {
+  width: 30%;
+  position: fixed;
+  right: 0;
+  min-width: 400px;
+  border: 1px solid #bbbbbb;
+}
+.errors-main {
+  padding: 20px;
+}
+
+.errors-main > h1 {
+  padding: 10px 0;
 }
