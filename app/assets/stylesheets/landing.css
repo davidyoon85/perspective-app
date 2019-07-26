@@ -168,6 +168,11 @@ button[type="submit"] {
 .errors-container {
   width: 40%;
   min-width: 400px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: 30vh;
+  padding-top: 11%;
 }
 .errors-main {
   display: flex;
