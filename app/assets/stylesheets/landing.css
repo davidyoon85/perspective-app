@@ -77,7 +77,7 @@ input[type="email"]:focus {
 }
 
 .main-form {
-  width: 40%;
+  width: 50%;
 }
 
 .form-header {
@@ -87,6 +87,7 @@ input[type="email"]:focus {
   justify-content: center;
   padding: 40px 0px 30px 50px;
   margin: auto;
+  min-width: 550px;
 }
 
 .header-title {
@@ -104,7 +105,8 @@ input[type="email"]:focus {
 
 .form-section {
   display: flex;
-  min-width: 1200px;
+  justify-content: center;
+  min-width: 1050px;
 }
 
 .question {
@@ -116,7 +118,7 @@ input[type="email"]:focus {
   font-weight: 400;
   border: 1px solid #d3d3d3;
   width: 100%;
-  min-width: 600px;
+  min-width: 550px;
   margin: auto;
   text-align: center;
 }
@@ -165,8 +167,6 @@ button[type="submit"] {
 
 .errors-container {
   width: 40%;
-  position: fixed;
-  right: 0;
   min-width: 400px;
 }
 .errors-main {
@@ -177,6 +177,7 @@ button[type="submit"] {
   width: 60%;
   margin: auto;
   padding: 20px;
+  min-width: 250px;
 }
 
 .errors-main > h1 {
